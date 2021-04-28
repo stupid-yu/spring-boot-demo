@@ -1,0 +1,31 @@
+######################### 访问端口、路径 start #########################
+server:
+  port: 8780
+  servlet:
+    context-path: /api
+######################### 访问端口、路径 end #########################
+######################### spring config start #########################
+spring:
+  # 数据源配置
+  datasource:
+    driver-class-name:
+    url: jdbc:mysql://localhost:3306/ldap_demo?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: root
+    password: root
+  # jpa配置
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format-sql: true
+    show-sql: true
+  # jackson配置
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+######################### spring config end #########################
