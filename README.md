@@ -1,2 +1,2 @@
 # springboot-demo
-spring boot demo
+spring boot demo jpa and ldap
